@@ -55,8 +55,8 @@ export default async function Home() {
         return (
             <div className="p-4 w-full md:w-1/2 lg:w-1/4 flex flex-col items-start text-center m-auto gap-8">
                 {
-                    articlesList.map((article) => (
-                        <Link href={`/article/${article.title}`} className="hover:underline hover:text-blue-600 transition flex flex-col w-full shadow-xl
+                    articlesList.map((article, id) => (
+                        <Link key={id} href={`/article/${article.title}`} className="hover:underline hover:text-blue-600 transition flex flex-col w-full shadow-xl
                         p-4 rounded-xl">
                             <h1 className="text-2xl font-bold">{article.title}</h1>
                             <div className="flex flex-row justify-between gap-3">
